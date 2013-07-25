@@ -1,0 +1,35 @@
+{
+   "background":{
+      "scripts":[
+         "background.js"
+      ]
+   },
+   "content_scripts":[
+      {
+         "all_frames" : true,
+         "js": [ "content.js" ],
+         "matches": [ "http://*/*", "https://*/*"],
+         "exclude_matches": [ "http://now.com/home/" ],
+         "run_at": "document_start"
+      }      
+   ],
+   "description":"All.",
+   "icons":{
+      "128":"icon.png"
+   },
+   "manifest_version":2,
+   "name":"Chrome Plus",
+   "permissions":[
+      "http://*/*",
+      "https://*/*",
+      "background",
+      "tabs",
+      "notifications",
+      "contextMenus",
+      "unlimitedStorage"
+   ],
+   "version":"3.3.627",
+   "web_accessible_resources":[
+      "icon.png"
+   ]
+}
