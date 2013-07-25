@@ -91,10 +91,6 @@ function browserAction(a) {
   chrome.extension.sendRequest({name:"updateBadge", host:gb.host, data:a})
 }
 
-// (function(){
-//   isSkipAd() && addStyle();
-// })();
-
 var waitForDomInterval = setInterval(function () {
   var node;
   if (typeof document.head == "undefined")
